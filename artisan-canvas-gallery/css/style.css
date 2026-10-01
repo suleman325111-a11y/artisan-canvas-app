@@ -1,0 +1,259 @@
+/* Artisan Canvas Gallery - Vibrant & Artistic Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cinzel:wght@600;700;800&display=swap');
+
+:root {
+  --primary-font: 'Plus Jakarta Sans', sans-serif;
+  --serif-font: 'Playfair Display', serif;
+  --display-font: 'Cinzel', serif;
+  
+  --terracotta: #E05A47;
+  --warm-gold: #D4AF37;
+  --deep-indigo: #1A1F36;
+  --canvas-cream: #FAF7F2;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: #0E1017;
+  color: #E2E8F0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.font-serif-heading {
+  font-family: var(--serif-font);
+}
+
+.font-display {
+  font-family: var(--display-font);
+}
+
+/* Artistic gradients and paint glow effects */
+.art-gradient-text {
+  background: linear-gradient(135deg, #F59E0B 0%, #EC4899 50%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.art-gold-gradient {
+  background: linear-gradient(135deg, #FFE259 0%, #FFA751 100%);
+}
+
+.bg-art-pattern {
+  background-color: #0c0e14;
+  background-image: radial-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px), radial-gradient(rgba(236, 72, 153, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #11141F;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D3748;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A5568;
+}
+
+/* Canvas Material Textures & Overlays */
+.texture-canvas {
+  position: relative;
+}
+.texture-canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px),
+              repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03) 2px, transparent 2px, transparent 4px);
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+
+.texture-impasto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.15) 0%, transparent 60%),
+              repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 3px, transparent 3px, transparent 8px);
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+}
+
+.texture-paper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: rgba(255, 252, 240, 0.04);
+  mix-blend-mode: multiply;
+}
+
+.texture-metal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.3) 50%, transparent 60%);
+  mix-blend-mode: screen;
+  opacity: 0.7;
+}
+
+/* Realistic Frame 3D Styling */
+.frame-florentine-gold {
+  border: 18px solid #B8860B;
+  border-image: linear-gradient(to bottom right, #FFE082, #B8860B, #8B6508, #FFD54F) 1;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.frame-natural-oak {
+  border: 18px solid #BA9B7B;
+  border-image: linear-gradient(135deg, #DEBA9D, #9F7E5C, #CBB093) 1;
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.75), inset 0 0 10px rgba(0,0,0,0.4);
+}
+
+.frame-matte-obsidian {
+  border: 18px solid #141416;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.9), inset 0 0 12px rgba(255, 255, 255, 0.07);
+}
+
+.frame-nordic-white {
+  border: 18px solid #EDEDED;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75), inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.frame-heritage-walnut {
+  border: 20px solid #3E2415;
+  border-image: linear-gradient(135deg, #5C3820, #2C180B, #482B18) 1;
+  box-shadow: 0 35px 70px -15px rgba(0, 0, 0, 0.85), inset 0 0 18px rgba(0,0,0,0.7);
+}
+
+.frame-wrap {
+  border: none;
+  box-shadow: -8px 12px 25px rgba(0, 0, 0, 0.65), 10px 18px 45px rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotateY(-1deg);
+}
+
+/* Room Wall Lighting Ambience */
+.ambience-daylight {
+  filter: brightness(1.02) contrast(1.02);
+}
+
+.ambience-spotlight {
+  position: relative;
+}
+.ambience-spotlight::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 120%;
+  background: radial-gradient(circle at 50% 20%, rgba(255, 240, 200, 0.28) 0%, rgba(255, 240, 200, 0.08) 40%, transparent 75%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ambience-evening {
+  filter: sepia(0.2) saturate(1.15) brightness(0.92);
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(22, 26, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(30, 36, 52, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Badge and tags */
+.brush-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(245, 158, 11, 0.15));
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FBBF24;
+}
+
+/* Custom interactive animation effects */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+  50% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.4); }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s infinite;
+}
+
+/* Swatch Circles */
+.swatch-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, ring-width 0.2s ease;
+}
+.swatch-circle:hover {
+  transform: scale(1.15);
+}
+
+/* Cart Drawer & Modals */
+.cart-drawer-open {
+  transform: translateX(0) !important;
+}
+
+/* Custom Radio Option Cards */
+.customizer-card {
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.customizer-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.customizer-card.active {
+  border-color: #F59E0B;
+  background: rgba(245, 158, 11, 0.08);
+  box-shadow: 0 0 0 1px #F59E0B, 0 8px 20px -4px rgba(245, 158, 11, 0.25);
+}
+
+/* Wall Preview Scale Transition */
+.mockup-art-container {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  transform-origin: center center;
+}

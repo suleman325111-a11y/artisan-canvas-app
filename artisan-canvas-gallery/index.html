@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Canvas | Curated Fine Art & Customization Studio</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              terracotta: '#E05A47',
+              amber: '#F59E0B',
+              dark: '#0E1017',
+              card: '#161A26',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-art-pattern min-h-screen text-neutral-200 antialiased selection:bg-amber-500 selection:text-neutral-950">
+
+  <!-- Top Announcement Bar -->
+  <aside aria-label="Special Offers" class="bg-gradient-to-r from-amber-600 via-rose-600 to-indigo-700 text-white text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
+    <span>✨ Autumn Artistry Exhibition: Use code <strong class="bg-black/30 px-2 py-0.5 rounded font-mono font-bold tracking-wider">ARTLOVE15</strong> for 15% off + Free Insured Delivery on orders over $250!</span>
+  </aside>
+
+  <!-- Main Navigation -->
+  <header class="sticky top-0 z-40 glass-panel border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 flex items-center justify-center text-neutral-950 text-xl font-bold shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div>
+            <span class="font-display font-bold text-xl sm:text-2xl tracking-wider text-neutral-100 group-hover:text-amber-400 transition-colors">
+              ARTISAN<span class="text-amber-400 font-light">CANVAS</span>
+            </span>
+            <span class="block text-[10px] tracking-widest text-neutral-400 uppercase -mt-1">Fine Art & Custom Studio</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-300">
+          <a href="#customizer-studio" class="hover:text-amber-400 transition-colors flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            3D Studio
+          </a>
+          <a href="#curated-gallery" class="hover:text-amber-400 transition-colors">Curated Gallery</a>
+          <a href="#custom-commission" class="hover:text-amber-400 transition-colors">Custom Commission</a>
+          <a href="#craftsmanship" class="hover:text-amber-400 transition-colors">Craftsmanship</a>
+          <a href="#faq-section" class="hover:text-amber-400 transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="flex items-center gap-4">
+          <!-- Direct Studio CTA -->
+          <a href="#customizer-studio" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold bg-neutral-800 border border-neutral-700 hover:border-amber-500/60 text-amber-400 hover:bg-neutral-800/80 transition-all">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Visualizer</span>
+          </a>
+
+          <!-- Cart Trigger Button -->
+          <button class="open-cart-btn relative p-2.5 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-neutral-200 transition-colors flex items-center gap-2" title="View Shopping Cart">
+            <i class="fa-solid fa-bag-shopping text-base text-amber-400"></i>
+            <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center shadow-lg">0</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-neutral-400 hover:text-white text-lg">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-neutral-800 bg-neutral-950 px-4 pt-3 pb-6 space-y-3">
+      <a href="#customizer-studio" class="block py-2 text-neutral-200 font-medium hover:text-amber-400">3D Customizer Studio</a>
+      <a href="#curated-gallery" class="block py-2 text-neutral-200 font-medium hover:text-amber-400">Curated Gallery</a>
+      <a href="#custom-commission" class="block py-2 text-neutral-200 font-medium hover:text-amber-400">Custom Commission</a>
+      <a href="#craftsmanship" class="block py-2 text-neutral-200 font-medium hover:text-amber-400">Craftsmanship</a>
+      <a href="#faq-section" class="block py-2 text-neutral-200 font-medium hover:text-amber-400">FAQ</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 overflow-hidden">
+    <!-- Atmospheric Ambient Glows -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider">
+            <i class="fa-solid fa-sparkles"></i>
+            <span>Interactive Custom Art Studio</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif-heading font-extrabold tracking-tight text-neutral-100 leading-[1.15]">
+            Masterpiece Paintings. <br>
+            <span class="art-gradient-text">Custom Tailored</span> to Your Space.
+          </h1>
+
+          <p class="text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+            Select from our curated gallery of original oils and acrylics, or upload your own vision. Experiment with custom sizes, premium archival materials, and handcrafted hardwood frames with real-time 3D room visualization.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#customizer-studio" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-sm tracking-wide shadow-xl shadow-amber-500/25 hover:opacity-95 transform hover:-translate-y-0.5 transition-all text-center flex items-center justify-center gap-3">
+              <i class="fa-solid fa-palette"></i>
+              Launch 3D Customizer
+            </a>
+            <a href="#curated-gallery" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-neutral-900/90 border border-neutral-700 hover:border-neutral-500 text-neutral-200 font-semibold text-sm hover:bg-neutral-800 transition-all text-center flex items-center justify-center gap-2">
+              <i class="fa-regular fa-images"></i>
+              Browse Gallery (8)
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-neutral-800/80 text-center lg:text-left">
+            <div>
+              <div class="text-xl sm:text-2xl font-bold text-neutral-100">100+ Yrs</div>
+              <div class="text-xs text-neutral-400 font-medium">Museum Archival Life</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-bold text-neutral-100">6 Hardwoods</div>
+              <div class="text-xs text-neutral-400 font-medium">Handcrafted Frames</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-bold text-neutral-100">4.9 ★★★★★</div>
+              <div class="text-xs text-neutral-400 font-medium">Collector Satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Teaser Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md p-3 rounded-3xl glass-panel-elevated shadow-2xl">
+            <!-- Simulated Framed Art with Texture -->
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl frame-florentine-gold">
+              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=800&q=80" 
+                   alt="Symphony of the Sunburst" 
+                   class="w-full h-80 object-cover">
+              
+              <!-- Floating Customization Tag -->
+              <div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-neutral-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-neutral-100">Symphony of the Sunburst</div>
+                  <div class="text-[11px] text-amber-300 font-medium">Florentine Gold • Impasto Acrylic • 24" × 36"</div>
+                </div>
+                <button onclick="artStudio.setPainting('art-01')" class="px-3 py-1.5 rounded-lg bg-amber-500 text-neutral-950 text-xs font-bold hover:bg-amber-400 transition-colors">
+                  Customize
+                </button>
+              </div>
+            </div>
+
+            <!-- Floating feature badges -->
+            <div class="absolute -top-4 -right-4 px-3 py-1.5 rounded-full bg-neutral-900 border border-amber-500/40 text-amber-400 text-xs font-bold shadow-xl flex items-center gap-1.5 animate-float">
+              <i class="fa-solid fa-cube"></i> Live Room Scale
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- HERO FEATURE: INTERACTIVE 3D CUSTOMIZER STUDIO              -->
+  <!-- ============================================================ -->
+  <section id="customizer-studio" class="py-20 relative bg-neutral-950/60 border-t border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-sliders"></i>
+            <span>Interactive Customization Engine</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-neutral-100">
+            Art Studio & Room Visualizer
+          </h2>
+          <p class="text-sm text-neutral-400 mt-2 max-w-xl">
+            Preview any painting in realistic room spaces, switch handcrafted frames, adjust scale, and customize canvas textures with live price updates.
+          </p>
+        </div>
+
+        <!-- Custom Upload or Reset Actions -->
+        <div class="flex items-center gap-3">
+          <label class="px-4 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 hover:border-amber-400 text-neutral-200 text-xs font-bold cursor-pointer transition-all flex items-center gap-2 hover:bg-neutral-800 shadow-md">
+            <i class="fa-solid fa-cloud-arrow-up text-amber-400"></i>
+            <span>Upload Your Own Photo</span>
+            <input type="file" id="custom-art-file-input" accept="image/*" class="hidden">
+          </label>
+        </div>
+      </div>
+
+      <!-- Main Studio Workspace Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- LEFT: Live Interactive Room Mockup Viewport (7 Cols) -->
+        <div class="lg:col-span-7 flex flex-col gap-4 sticky top-24">
+          
+          <!-- Mockup Stage Card -->
+          <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-neutral-800 bg-neutral-950 shadow-2xl select-none group">
+            
+            <!-- Room Background Image -->
+            <img id="mockup-room-background" 
+                 src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1600&q=80" 
+                 alt="Room Background" 
+                 class="w-full h-full object-cover transition-opacity duration-500">
+
+            <!-- Ambience Overlay Lighting (Daylight / Spotlight / Evening) -->
+            <div id="mockup-ambience-overlay" class="absolute inset-0 pointer-events-none transition-all duration-500 z-10 ambience-daylight"></div>
+
+            <!-- The Framed Artwork on Wall -->
+            <div class="absolute inset-0 flex items-center justify-center p-6 z-20 pointer-events-none">
+              <div id="mockup-artwork-wrapper" class="mockup-art-container frame-florentine-gold transition-all duration-500 pointer-events-auto">
+                <div id="mockup-mat-container" class="transition-all duration-300 p-0">
+                  <div class="relative overflow-hidden transition-all duration-300 texture-canvas">
+                    <img id="mockup-artwork-img" 
+                         src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80" 
+                         alt="Framed Artwork" 
+                         class="max-h-[220px] sm:max-h-[300px] md:max-h-[380px] w-auto object-contain block shadow-md">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dimension Tag Badge -->
+            <div class="absolute top-4 left-4 z-30">
+              <span id="mockup-dimension-tag" class="px-3 py-1.5 rounded-full bg-neutral-950/80 backdrop-blur-md border border-neutral-700 text-xs font-semibold text-neutral-200 shadow-lg">
+                Gallery Classic • 24" × 36" (60 × 90 cm)
+              </span>
+            </div>
+
+            <!-- Lighting Ambience Toggles -->
+            <div class="absolute top-4 right-4 z-30 flex items-center gap-1 p-1 rounded-full bg-neutral-950/80 backdrop-blur-md border border-neutral-700 shadow-lg">
+              <button class="ambience-btn px-2.5 py-1 rounded-full text-xs font-medium transition-all bg-amber-500 text-neutral-950 font-bold" data-ambience="daylight" title="Natural Daylight">
+                <i class="fa-regular fa-sun"></i>
+              </button>
+              <button class="ambience-btn px-2.5 py-1 rounded-full text-xs font-medium text-neutral-400 hover:text-white transition-all" data-ambience="spotlight" title="Gallery Spotlight">
+                <i class="fa-solid fa-lightbulb"></i>
+              </button>
+              <button class="ambience-btn px-2.5 py-1 rounded-full text-xs font-medium text-neutral-400 hover:text-white transition-all" data-ambience="evening" title="Warm Evening Glow">
+                <i class="fa-regular fa-moon"></i>
+              </button>
+            </div>
+
+            <!-- Room Switcher Pills on bottom -->
+            <div class="absolute bottom-4 inset-x-4 z-30 flex items-center justify-center flex-wrap gap-2">
+              <div id="room-picker-container" class="flex items-center gap-1.5 p-1 rounded-full bg-neutral-950/85 backdrop-blur-md border border-neutral-800 shadow-xl">
+                <!-- Dynamically populated room buttons -->
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick Tip -->
+          <div class="flex items-center justify-between text-xs text-neutral-400 px-2">
+            <span class="flex items-center gap-1.5">
+              <i class="fa-solid fa-ruler-combined text-amber-400"></i>
+              Wall scale updates proportionally when choosing different sizes.
+            </span>
+            <span class="text-neutral-500">Museum Insured Packaging Included</span>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Interactive Customization Deck (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Artwork Information Card -->
+          <div class="p-6 rounded-2xl glass-panel-elevated">
+            <div class="flex items-start justify-between">
+              <div>
+                <span id="customizer-custom-badge" class="hidden text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500 text-neutral-950 mb-1 inline-block">CUSTOM UPLOAD</span>
+                <h3 id="customizer-painting-title" class="font-serif-heading font-bold text-xl text-neutral-100">
+                  Symphony of the Sunburst
+                </h3>
+                <p id="customizer-painting-artist" class="text-xs text-amber-400 font-medium mt-0.5">
+                  By Elena Vance
+                </p>
+                <p id="customizer-painting-medium" class="text-xs text-neutral-400 mt-1">
+                  Textured Oil & Gold Leaf on Canvas
+                </p>
+              </div>
+
+              <!-- Price Tag -->
+              <div class="text-right">
+                <span class="text-[10px] uppercase tracking-wider text-neutral-400 block">Total Price</span>
+                <div class="text-2xl font-bold text-amber-400" id="customizer-total-price">$315</div>
+                <div class="text-xs text-neutral-500 line-through" id="customizer-strike-price">$395</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 1: Canvas Size -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-neutral-300 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-[11px] flex items-center justify-center font-bold">1</span>
+                Select Dimensions & Scale
+              </label>
+              <span class="text-[11px] text-neutral-400">4 Proportions</span>
+            </div>
+            <div id="size-options-container" class="grid grid-cols-2 gap-2.5">
+              <!-- Rendered via customizer.js -->
+            </div>
+          </div>
+
+          <!-- Step 2: Canvas Material Texture -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-neutral-300 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-[11px] flex items-center justify-center font-bold">2</span>
+                Choose Canvas & Material Finish
+              </label>
+            </div>
+            <div id="material-options-container" class="space-y-2.5">
+              <!-- Rendered via customizer.js -->
+            </div>
+          </div>
+
+          <!-- Step 3: Hardwood Frame Selection -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-neutral-300 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-[11px] flex items-center justify-center font-bold">3</span>
+                Select Hand-Crafted Frame
+              </label>
+              <span class="text-[11px] text-amber-400 font-medium">Solid FSC Wood</span>
+            </div>
+            <div id="frame-options-container" class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <!-- Rendered via customizer.js -->
+            </div>
+          </div>
+
+          <!-- Step 4: Museum Matting / Border -->
+          <div id="matting-section-wrapper" class="space-y-3 transition-opacity">
+            <div class="flex items-center justify-between">
+              <label class="text-xs font-bold uppercase tracking-wider text-neutral-300 flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 text-[11px] flex items-center justify-center font-bold">4</span>
+                Museum Acid-Free Matting
+              </label>
+            </div>
+            <div id="mat-options-container" class="grid grid-cols-3 gap-2">
+              <!-- Rendered via customizer.js -->
+            </div>
+          </div>
+
+          <!-- Pricing Breakdown & Add to Cart -->
+          <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800 space-y-3 shadow-xl">
+            <div class="text-xs space-y-1.5 text-neutral-400">
+              <div class="flex justify-between">
+                <span>Print & Canvas Base:</span>
+                <span id="calc-print-subtotal" class="font-medium text-neutral-200">$240</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Handcrafted Frame:</span>
+                <span id="calc-frame-cost" class="font-medium text-neutral-200">+$75</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Museum Matting:</span>
+                <span id="calc-mat-cost" class="font-medium text-neutral-200">None</span>
+              </div>
+              <div class="flex justify-between text-emerald-400 pt-1 border-t border-neutral-800">
+                <span>Ready to Hang Hardware:</span>
+                <span>Included Free ($35 value)</span>
+              </div>
+            </div>
+
+            <!-- Action Button -->
+            <button id="customizer-add-to-cart-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-sm tracking-wide shadow-lg shadow-amber-500/20 hover:opacity-95 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
+              <i class="fa-solid fa-cart-plus text-base"></i>
+              <span>Add Custom Artwork to Cart</span>
+            </button>
+
+            <div class="text-center text-[11px] text-neutral-500 flex items-center justify-center gap-4 pt-1">
+              <span><i class="fa-solid fa-shield-halved text-amber-400 mr-1"></i> 30-Day Guarantee</span>
+              <span><i class="fa-solid fa-truck-fast text-amber-400 mr-1"></i> Insured Crated Delivery</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION: CURATED ART GALLERY                                -->
+  <!-- ============================================================ -->
+  <section id="curated-gallery" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="brush-badge">Curated Collection</span>
+        <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-neutral-100">
+          Original Masterpieces & Limited Editions
+        </h2>
+        <p class="text-sm text-neutral-400">
+          Handpicked works by contemporary impressionists, surrealists, and landscape masters. Click any artwork to launch in our 3D room customizer.
+        </p>
+      </div>
+
+      <!-- Filter, Search & Sort Bar -->
+      <div class="p-4 rounded-2xl glass-panel mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        
+        <!-- Category Filter Pills -->
+        <div id="gallery-categories-pills" class="flex items-center flex-wrap gap-2 w-full md:w-auto">
+          <!-- Populated dynamically via app.js -->
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <!-- Search Input -->
+          <div class="relative flex-1 md:w-64">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 text-xs"></i>
+            <input type="text" id="gallery-search-input" placeholder="Search title, artist, style..." 
+                   class="w-full pl-9 pr-4 py-2 rounded-xl bg-neutral-900 border border-neutral-700/80 text-xs text-neutral-200 placeholder-neutral-500 focus:outline-none focus:border-amber-400">
+          </div>
+
+          <!-- Sort Select -->
+          <select id="gallery-sort-select" class="py-2 px-3 rounded-xl bg-neutral-900 border border-neutral-700/80 text-xs text-neutral-300 focus:outline-none focus:border-amber-400 cursor-pointer">
+            <option value="featured">Featured First</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- Results Count Bar -->
+      <div class="flex items-center justify-between text-xs text-neutral-400 mb-6 px-1">
+        <span id="gallery-results-count">Showing 8 curated artworks</span>
+        <span class="text-amber-400/90 font-medium">All artworks eligible for custom sizing & framing</span>
+      </div>
+
+      <!-- Paintings Grid -->
+      <div id="paintings-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically via app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION: BESPOKE COMMISSION STUDIO                          -->
+  <!-- ============================================================ -->
+  <section id="custom-commission" class="py-20 relative bg-neutral-950/80 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Editorial Storytelling -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="brush-badge">Custom Commissions</div>
+          
+          <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-neutral-100 leading-tight">
+            Want a 100% Original Painting <br>
+            <span class="art-gradient-text">Created for You?</span>
+          </h2>
+          
+          <p class="text-sm text-neutral-400 leading-relaxed">
+            Collaborate directly with our resident master painters. Whether you want a sentimental wedding portrait, your favorite landscape, or a custom abstract tailored to your interior color scheme, we turn your memories into heirloom canvas art.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-sm font-bold">1</div>
+              <div>
+                <h4 class="text-sm font-semibold text-neutral-200">Share Vision or Reference Photo</h4>
+                <p class="text-xs text-neutral-400">Upload photos, describe desired moods, or specify Pantone room palette matches.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-rose-500/20 text-rose-400 flex items-center justify-center shrink-0 text-sm font-bold">2</div>
+              <div>
+                <h4 class="text-sm font-semibold text-neutral-200">Artist Concept Sketch & Approval</h4>
+                <p class="text-xs text-neutral-400">Receive color study sketches within 48 hours for your direct feedback and sign-off.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 text-sm font-bold">3</div>
+              <div>
+                <h4 class="text-sm font-semibold text-neutral-200">Master Painting & Framed Delivery</h4>
+                <p class="text-xs text-neutral-400">Hand-painted with genuine impasto oils, museum-framed, and delivered in custom wooden art crates.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center gap-4 text-xs text-neutral-300">
+            <i class="fa-solid fa-certificate text-amber-400 text-2xl"></i>
+            <div>
+              <span class="font-semibold text-neutral-100 block">Certificate of Authenticity Included</span>
+              Signed and serialized by the assigned artist with provenance archive.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry / Request Form -->
+        <div class="lg:col-span-6">
+          <div class="p-8 rounded-3xl glass-panel-elevated shadow-2xl">
+            <h3 class="font-serif-heading font-bold text-xl text-neutral-100 mb-1">Commission an Original Piece</h3>
+            <p class="text-xs text-neutral-400 mb-6">Tell us about your space and preferred medium. No payment required to start.</p>
+
+            <form id="commission-request-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-neutral-300 mb-1">Your Name</label>
+                  <input type="text" required placeholder="Elena Rostova" class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-neutral-300 mb-1">Email Address</label>
+                  <input type="email" required placeholder="elena@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-medium text-neutral-300 mb-1">Preferred Medium</label>
+                  <select class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+                    <option>Heavy Impasto Oil on Canvas</option>
+                    <option>Modern Fluid Acrylic & Resin</option>
+                    <option>Ethereal Botanical Watercolor</option>
+                    <option>Charcoal & Gold Leaf Mixed Media</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-neutral-300 mb-1">Approximate Size</label>
+                  <select class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+                    <option>Medium (24" × 36") - from $450</option>
+                    <option>Large (32" × 48") - from $750</option>
+                    <option>Oversized Statement (48" × 72") - from $1,200</option>
+                    <option>Custom Architectural Sizing</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-neutral-300 mb-1">Describe Your Vision / Interior Space</label>
+                <textarea rows="3" placeholder="E.g., Coastal cliffside sunset for our high-ceiling dining room, with sage and gold accents..." class="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-xs tracking-wider uppercase hover:opacity-95 transition-opacity shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                Submit Commission Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION: ARTISAN CRAFTSMANSHIP PILLARS                       -->
+  <!-- ============================================================ -->
+  <section id="craftsmanship" class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="brush-badge">Studio Standard</span>
+        <h2 class="text-3xl font-serif-heading font-bold text-neutral-100">
+          The Anatomy of an Artisan Canvas
+        </h2>
+        <p class="text-sm text-neutral-400">
+          Why collectors choose our workshop: museum archival pigments, hand-embellished impasto strokes, and artisan joinery.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-brush"></i>
+          </div>
+          <h3 class="font-serif-heading font-bold text-base text-neutral-100 mb-2">Hand Impasto Embellishment</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Every impasto edition is hand-finished by master studio painters using palette knives for tangible three-dimensional texture.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <h3 class="font-serif-heading font-bold text-base text-neutral-100 mb-2">Solid FSC Hardwood Frames</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Sourced from sustainable European forests. Natural White Oak, Italian Florentine Gilt, and Aged Heritage Walnut.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-shield-cat"></i>
+          </div>
+          <h3 class="font-serif-heading font-bold text-base text-neutral-100 mb-2">100-Year Pigment Guarantee</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Printed with 12-color archival pigment inks on 380gsm acid-free linen canvas. Will never fade or discolor over generations.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-amber-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-box-open"></i>
+          </div>
+          <h3 class="font-serif-heading font-bold text-base text-neutral-100 mb-2">Crated & Ready to Hang</h3>
+          <p class="text-xs text-neutral-400 leading-relaxed">
+            Pre-installed heavy-duty D-rings, hanging wire, and felt wall protectors included in shock-absorbing reinforced crates.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION: COLLECTOR REVIEWS                                  -->
+  <!-- ============================================================ -->
+  <section class="py-20 relative bg-neutral-950/40 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+        <span class="brush-badge">Verified Collectors</span>
+        <h2 class="text-3xl font-serif-heading font-bold text-neutral-100">
+          Loved in Over 2,400 Modern Homes
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 relative space-y-4">
+          <div class="flex text-amber-400 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "We ordered 'Symphony of the Sunburst' in the Grand 32x48 size with the Florentine Gold frame. The live visualizer was 100% accurate to how it sits over our living room mantel! The textured paint strokes catch the afternoon sun brilliantly."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-neutral-800">
+            <div class="w-9 h-9 rounded-full bg-amber-500 text-black font-bold flex items-center justify-center text-xs">SM</div>
+            <div>
+              <div class="text-xs font-bold text-neutral-200">Sarah & Mark T.</div>
+              <div class="text-[10px] text-neutral-400">Verified Collector • Chicago, IL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 relative space-y-4">
+          <div class="flex text-amber-400 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "I used the upload feature to test our wedding photo in the Natural Oak frame. The museum rag paper finish gave it an authentic gallery feel rather than a cheap commercial print. Arrived in a solid wooden box!"
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-neutral-800">
+            <div class="w-9 h-9 rounded-full bg-rose-500 text-white font-bold flex items-center justify-center text-xs">DL</div>
+            <div>
+              <div class="text-xs font-bold text-neutral-200">David & Lauren K.</div>
+              <div class="text-[10px] text-neutral-400">Verified Collector • Austin, TX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800 relative space-y-4">
+          <div class="flex text-amber-400 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed italic">
+            "The heavy impasto texture on Julian Moreau's 'Emerald Coast Solitude' is breathtaking. You can literally feel the palette knife ridges. Seamless ordering and white-glove packaging."
+          </p>
+          <div class="flex items-center gap-3 pt-2 border-t border-neutral-800">
+            <div class="w-9 h-9 rounded-full bg-indigo-500 text-white font-bold flex items-center justify-center text-xs">ER</div>
+            <div>
+              <div class="text-xs font-bold text-neutral-200">Claire DeWitt</div>
+              <div class="text-[10px] text-neutral-400">Interior Designer • Seattle, WA</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION: FAQ ACCORDION                                      -->
+  <!-- ============================================================ -->
+  <section id="faq-section" class="py-20 relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12 space-y-2">
+        <span class="brush-badge">Customer Support</span>
+        <h2 class="text-3xl font-serif-heading font-bold text-neutral-100">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div class="space-y-3">
+        
+        <div class="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
+          <button class="faq-toggle-btn w-full px-5 py-4 text-left font-semibold text-sm text-neutral-200 flex items-center justify-between hover:text-amber-400 transition-colors">
+            <span>How does the 3D room customizer calculate wall proportions?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron text-xs transition-transform duration-200 text-neutral-500"></i>
+          </button>
+          <div class="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3 hidden">
+            Our visualizer engine uses scaled vector transforms calibrated to standard 8-foot interior ceilings and standard 3-seater sofas. When you switch between Studio Petite (16"x20") and Architectural Oversized (40"x60"), the canvas scales realistically relative to the room furniture.
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
+          <button class="faq-toggle-btn w-full px-5 py-4 text-left font-semibold text-sm text-neutral-200 flex items-center justify-between hover:text-amber-400 transition-colors">
+            <span>What is the difference between Stretched Canvas and Textured Impasto?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron text-xs transition-transform duration-200 text-neutral-500"></i>
+          </button>
+          <div class="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3 hidden">
+            Stretched Canvas is printed using 12-color archival giclée inks on 380gsm cotton canvas with a protective satin varnish. The Textured Impasto edition is hand-embellished by master painters in our studio with thick, raised clear acrylic strokes following the brush paths of the original artwork for tangible relief and depth.
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
+          <button class="faq-toggle-btn w-full px-5 py-4 text-left font-semibold text-sm text-neutral-200 flex items-center justify-between hover:text-amber-400 transition-colors">
+            <span>How are artworks packaged and shipped?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron text-xs transition-transform duration-200 text-neutral-500"></i>
+          </button>
+          <div class="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3 hidden">
+            All framed pieces are wrapped in acid-free glassine paper, corner-guarded with high-density foam, and packed inside custom double-walled wooden art crates. Orders over $250 include Free Insured White-Glove Courier Delivery.
+          </div>
+        </div>
+
+        <div class="rounded-xl border border-neutral-800 bg-neutral-900/60 overflow-hidden">
+          <button class="faq-toggle-btn w-full px-5 py-4 text-left font-semibold text-sm text-neutral-200 flex items-center justify-between hover:text-amber-400 transition-colors">
+            <span>Can I customize a size that isn't listed in the 4 standard options?</span>
+            <i class="fa-solid fa-chevron-down faq-chevron text-xs transition-transform duration-200 text-neutral-500"></i>
+          </button>
+          <div class="px-5 pb-4 text-xs text-neutral-400 leading-relaxed border-t border-neutral-800/60 pt-3 hidden">
+            Yes! We accommodate custom architectural dimensions up to 10 feet wide. Simply submit a message through our Custom Commission tab or email our studio curators at studio@artisancanvas.gallery with your specific wall measurements.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                      -->
+  <!-- ============================================================ -->
+  <footer class="bg-neutral-950 border-t border-neutral-800 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-neutral-800">
+        
+        <!-- Brand Bio -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-rose-500 flex items-center justify-center text-neutral-950 text-lg font-bold">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <span class="font-display font-bold text-xl tracking-wider text-neutral-100">
+              ARTISAN<span class="text-amber-400">CANVAS</span>
+            </span>
+          </div>
+          <p class="text-xs text-neutral-400 leading-relaxed max-w-sm">
+            Bridging master studio artistry with cutting-edge visual customization. Every artwork is individually printed, framed, and textured by hand in our workshop.
+          </p>
+          <div class="flex items-center gap-3 text-neutral-400 text-sm">
+            <a href="#" class="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-amber-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-amber-400 transition-colors"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="w-8 h-8 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center hover:text-amber-400 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Studio Tools -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-200 mb-4">Studio Tools</h4>
+          <ul class="text-xs text-neutral-400 space-y-2.5">
+            <li><a href="#customizer-studio" class="hover:text-amber-400 transition-colors">3D Room Visualizer</a></li>
+            <li><a href="#customizer-studio" class="hover:text-amber-400 transition-colors">Frame & Mat Selector</a></li>
+            <li><a href="#customizer-studio" class="hover:text-amber-400 transition-colors">Custom Photo Upload</a></li>
+            <li><a href="#custom-commission" class="hover:text-amber-400 transition-colors">Commission Inquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Curated Styles -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-200 mb-4">Styles</h4>
+          <ul class="text-xs text-neutral-400 space-y-2.5">
+            <li><a href="#curated-gallery" class="hover:text-amber-400 transition-colors">Abstract Expressionism</a></li>
+            <li><a href="#curated-gallery" class="hover:text-amber-400 transition-colors">Plein-Air Landscapes</a></li>
+            <li><a href="#curated-gallery" class="hover:text-amber-400 transition-colors">Modern Surrealism</a></li>
+            <li><a href="#curated-gallery" class="hover:text-amber-400 transition-colors">Botanical & Floral</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-neutral-200 mb-4">Collector Gazette</h4>
+          <p class="text-xs text-neutral-400 mb-3">Subscribe for private gallery drops, artist interviews, and seasonal voucher codes.</p>
+          <form onsubmit="event.preventDefault(); showToast('Subscribed!', 'Welcome to the Collector Gazette.'); this.reset();" class="space-y-2">
+            <input type="email" required placeholder="collector@art.com" class="w-full px-3 py-2 rounded-xl bg-neutral-900 border border-neutral-700 text-xs text-neutral-200 focus:outline-none focus:border-amber-400">
+            <button type="submit" class="w-full py-2 rounded-xl bg-amber-500 text-neutral-950 font-bold text-xs hover:bg-amber-400 transition-colors">
+              Join Gazette
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <div>&copy; 2026 Artisan Canvas Gallery Inc. All rights reserved.</div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Shipping & Returns</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- SLIDE-OVER CART DRAWER                                       -->
+  <!-- ============================================================ -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity duration-300 hidden opacity-0"></div>
+
+  <div id="cart-drawer" class="fixed inset-y-0 right-0 max-w-md w-full bg-neutral-950 border-l border-neutral-800 z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300">
+    
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-neutral-800 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-bag-shopping text-amber-400"></i>
+        <h3 class="font-bold text-base text-neutral-100">Collector's Cart</h3>
+      </div>
+      <button id="close-cart-drawer" class="p-2 text-neutral-400 hover:text-white transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="px-5 py-3 bg-neutral-900/90 border-b border-neutral-800">
+      <div id="free-shipping-prompt" class="text-xs text-neutral-300 mb-1.5 flex items-center justify-between">
+        <!-- populated dynamically -->
+      </div>
+      <div class="w-full h-1.5 bg-neutral-800 rounded-full overflow-hidden">
+        <div id="free-shipping-progress" class="h-full bg-gradient-to-r from-amber-500 to-emerald-400 transition-all duration-300" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scrollable Body -->
+    <div class="flex-1 overflow-y-auto p-5 space-y-4">
+      
+      <!-- Empty Cart State -->
+      <div id="cart-empty-state" class="text-center py-16 hidden">
+        <div class="w-16 h-16 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center mx-auto mb-4 text-neutral-500 text-2xl">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h4 class="font-bold text-neutral-200 text-base">Your cart is empty</h4>
+        <p class="text-xs text-neutral-400 mt-1 max-w-xs mx-auto">Configure your favorite painting in our 3D customizer to add it to your order.</p>
+        <button onclick="cartManager.closeDrawer()" class="mt-4 px-5 py-2.5 rounded-full bg-amber-500 text-neutral-950 font-bold text-xs hover:bg-amber-400 transition-colors">
+          Explore Customizer
+        </button>
+      </div>
+
+      <!-- Item List Container -->
+      <div id="cart-items-container" class="space-y-3">
+        <!-- Rendered via cart.js -->
+      </div>
+
+    </div>
+
+    <!-- Cart Footer & Checkout Action -->
+    <div id="cart-footer" class="p-5 border-t border-neutral-800 bg-neutral-900/90 space-y-4">
+      
+      <!-- Promo code input -->
+      <div class="flex gap-2">
+        <input type="text" id="promo-input" placeholder="Promo code (e.g. ARTLOVE15)" class="flex-1 px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-200 placeholder-neutral-500 uppercase tracking-wider focus:outline-none focus:border-amber-400">
+        <button id="apply-promo-btn" class="px-4 py-2 rounded-xl bg-neutral-800 border border-neutral-700 hover:border-amber-500 text-xs font-bold text-amber-400 hover:bg-neutral-700 transition-colors">
+          Apply
+        </button>
+      </div>
+
+      <!-- Financial calculations -->
+      <div class="text-xs space-y-1.5 text-neutral-400">
+        <div class="flex justify-between">
+          <span>Subtotal:</span>
+          <span id="cart-subtotal" class="font-medium text-neutral-200">$0</span>
+        </div>
+        <div id="cart-discount-row" class="flex justify-between text-rose-400 hidden">
+          <span>Discount:</span>
+          <span id="cart-discount-amount">-$0</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Secure Art Delivery:</span>
+          <span id="cart-shipping" class="font-medium text-neutral-200">$25</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-neutral-100 pt-2 border-t border-neutral-800">
+          <span>Total:</span>
+          <span id="cart-total" class="text-amber-400">$0</span>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button id="proceed-to-checkout-btn" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-sm tracking-wide shadow-xl shadow-amber-500/20 hover:opacity-95 transition-all flex items-center justify-center gap-2">
+        <span>Proceed to Secure Checkout</span>
+        <i class="fa-solid fa-arrow-right text-xs"></i>
+      </button>
+
+      <p class="text-[11px] text-center text-neutral-500">
+        🔒 Encrypted 256-Bit Checkout • 30-Day Happiness Guarantee
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- CHECKOUT MODAL                                               -->
+  <!-- ============================================================ -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close button -->
+      <button id="close-checkout-modal" class="absolute top-5 right-5 text-neutral-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Active Checkout Form -->
+      <div id="checkout-form-container">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div>
+            <h3 class="font-serif-heading font-bold text-xl text-neutral-100">Collector Checkout</h3>
+            <p class="text-xs text-neutral-400">Total Due: <strong id="checkout-modal-total" class="text-amber-400 text-sm">$0</strong></p>
+          </div>
+        </div>
+
+        <form id="order-checkout-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">Full Name</label>
+              <input type="text" id="checkout-name" required placeholder="Julianne Moore" class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">Email for Tracking</label>
+              <input type="email" id="checkout-email" required placeholder="julianne@gallery.com" class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-neutral-300 mb-1">Street Address</label>
+            <input type="text" id="checkout-address" required placeholder="742 Evergreen Terrace, Apt 4B" class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">City</label>
+              <input type="text" id="checkout-city" required placeholder="New York" class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-neutral-300 mb-1">Country</label>
+              <input type="text" id="checkout-country" required placeholder="United States" class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+            </div>
+          </div>
+
+          <!-- Simulated Payment Options -->
+          <div class="pt-3 border-t border-neutral-800">
+            <label class="block text-xs font-bold text-neutral-300 mb-2">Simulated Secure Payment</label>
+            <div class="p-3 rounded-xl bg-neutral-950 border border-neutral-700 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-credit-card text-amber-400"></i>
+                <span class="text-neutral-200">Test Card: •••• •••• •••• 4242</span>
+              </div>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded font-mono font-bold">READY</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-medium text-neutral-300 mb-1">Delivery Notes (Optional)</label>
+            <input type="text" id="checkout-notes" placeholder="Gate code, concierge instructions..." class="w-full px-3 py-2 rounded-xl bg-neutral-950 border border-neutral-700 text-xs text-neutral-100 focus:outline-none focus:border-amber-400">
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-xs tracking-wider uppercase hover:opacity-95 transition-opacity shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2 mt-4">
+            <i class="fa-solid fa-check"></i>
+            Authorize & Place Order
+          </button>
+        </form>
+      </div>
+
+      <!-- Success / Confirmation Container -->
+      <div id="checkout-success-container" class="hidden text-center py-6 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-3xl mx-auto border border-emerald-500/30">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="font-serif-heading font-bold text-2xl text-neutral-100">Thank You For Your Order!</h3>
+        <p class="text-xs text-neutral-300">
+          Order Reference: <strong id="confirmation-order-id" class="text-amber-400 font-mono text-sm">#ART-000000</strong>
+        </p>
+        <p class="text-xs text-neutral-400 max-w-sm mx-auto">
+          A receipt and insured tracking details have been dispatched to <span id="confirmation-email" class="text-neutral-200 font-semibold">your email</span>. Our master carpenters have begun framing your selections.
+        </p>
+
+        <!-- Summary list -->
+        <div id="confirmation-summary" class="text-left bg-neutral-950 p-4 rounded-xl border border-neutral-800 text-xs">
+          <!-- Populated in JS -->
+        </div>
+
+        <div class="flex gap-3 justify-center pt-2">
+          <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-200 text-xs font-semibold flex items-center gap-2 transition-colors">
+            <i class="fa-solid fa-print"></i> Print Invoice
+          </button>
+          <button onclick="cartManager.closeCheckoutModal()" class="px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold transition-colors">
+            Continue Browsing
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- QUICK VIEW MODAL                                             -->
+  <!-- ============================================================ -->
+  <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-neutral-900 border border-neutral-800 rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      
+      <button id="close-quickview-modal" class="absolute top-5 right-5 text-neutral-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="rounded-2xl overflow-hidden bg-neutral-950 border border-neutral-800 shadow-xl">
+          <img id="quickview-image" src="" alt="Painting Preview" class="w-full h-80 object-cover">
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <h3 id="quickview-title" class="font-serif-heading font-bold text-2xl text-neutral-100"></h3>
+            <p id="quickview-artist" class="text-xs text-amber-400 font-semibold mt-0.5"></p>
+            <div class="flex items-center gap-3 text-xs text-neutral-400 mt-2">
+              <span id="quickview-medium"></span> • <span id="quickview-year"></span>
+            </div>
+          </div>
+
+          <p id="quickview-description" class="text-xs text-neutral-300 leading-relaxed"></p>
+
+          <div class="p-3.5 rounded-xl bg-neutral-950/80 border border-neutral-800 text-xs text-neutral-400 italic">
+            <span class="text-amber-400 font-bold not-italic block mb-1">Artist's Inspiration:</span>
+            <span id="quickview-story"></span>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-neutral-800">
+            <div>
+              <span class="text-[10px] text-neutral-400 block uppercase">Base Unframed Price</span>
+              <span id="quickview-price" class="text-xl font-bold text-amber-400"></span>
+            </div>
+
+            <button id="quickview-customize-btn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-neutral-950 font-bold text-xs tracking-wide hover:opacity-95 transition-opacity flex items-center gap-2">
+              <i class="fa-solid fa-sliders"></i>
+              Open in 3D Customizer
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Global Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-3 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/paintings-data.js"></script>
+  <script src="js/customizer.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
